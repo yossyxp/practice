@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="grid_layout.css">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<h1>アンケート</h1>
+	</header>
+	<!-- <main> グリッドレイアウトを使う場合はいらない -->
+		<nav>a</nav>
+	<form>
+		<div>
+			<p class="req">氏名</p>
+			<input type="text" placeholder="氏名" name="text" required/>
+		</div>
+		<div>
+			<p class="req">メールアドレス</p>
+			<input type="email" placeholder="メールアドレス" name="email"
+						 pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required />
+		</div>
+		<div>
+			<p>電話番号</p>
+			<input type="tel" placeholder="電話番号" name="tel"
+						 pattern="^\d{11}$|^\d{3,4}-\d{3,4}-\d{4}$"/>
+		</div>
+		<div>
+		<p>弊社を何でお知りになりましたか？</p>
+			<ul>
+				<li><label><input type="checkbox" value="c_official">弊社の公式ウェブサイト</label></li>
+				<li><label><input type="checkbox" value="c_blog">技術ブログ</label></li>
+				<li><label><input type="checkbox" value="c_friend">友人の紹介</label></li>
+				<li><label><input type="checkbox" value="c_other">その他</label><br />
+				<input type="text" name="otherComment" id="otherComment" placeholder="ご記入ください"></li>
+			</ul>
+		</div>
+		<button type="submit">送信する</button>
+		</form>
+		<aside>a</aside>
+	<!-- </main> -->
+		<footer>
+			<p>練習中.com</p>
+		</footer>
+</body>
+</html>

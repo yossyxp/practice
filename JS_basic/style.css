@@ -1,0 +1,66 @@
+
+*{
+	margin: 0;
+}
+
+body{
+	min-height: 100vh; /* 高さの最小値が目一杯 */
+	/* 固定幅 */
+	width: 800px;
+	margin: auto;
+	display: grid; /* グリッドレイアウト　*/
+	grid-template:
+	"header header header" 150px /* 縦幅 */
+	"left center right" 1fr /* 引き延ばし */
+	"footer footer footer" 300px
+	/ 150px 1fr 200px; /* 横幅 */
+}
+
+header{
+	background-color: gray;
+	grid-area: header; /* headerの場所に割り当てる */
+}
+
+form{
+	background-color: red;
+	grid-area: center;
+}
+
+nav{
+	background-color: blue;
+	grid-area: left;
+}
+
+aside{
+	background-color: green;
+	grid-area: right;
+}
+
+footer{
+	background-color: gray;
+	grid-area: footer;
+}
+
+/* NGなら赤くする */
+form input:invalid {
+  border : tomato 2px solid;
+}
+
+/* OKなら，その他のテキストボックス以外を緑にする */
+form input:valid:not(:last-child) {
+  border : seagreen 2px solid;
+}
+
+
+@media screen and (max-width: 900px){ /* 横幅が900px以下になったときに適用 */
+
+	body{
+		grid-template:
+		"header" 150px
+		"center" 1fr
+		"left"
+		"right"
+		"footer" 300px;
+	}
+
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Document</title>
+</head>
+<body>
+	<header>
+		<h1>アンケート</h1>
+	</header>
+	<!-- <main> グリッドレイアウトを使う場合はいらない -->
+		<nav>
+			<input type="text" id="text1"><br>
+			<input type="button" id="button1" value="入力完了">
+			<div id="div1"></div>
+			<div id="div2"></div>
+		</nav>
+	<form>
+		<div>
+			<p class="req">氏名</p>
+			<input type="text" placeholder="氏名" name="text" required/>
+		</div>
+		<div>
+			<p class="req">メールアドレス</p>
+			<input type="email" placeholder="メールアドレス" name="email"
+						 pattern="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*" required />
+		</div>
+		<div>
+			<p>電話番号</p>
+			<input type="tel" placeholder="電話番号" name="tel"
+						 pattern="^\d{11}$|^\d{3,4}-\d{3,4}-\d{4}$"/>
+		</div>
+		<div>
+		<p>弊社を何でお知りになりましたか？</p>
+			<ul>
+				<li><label><input type="checkbox" value="c_official">弊社の公式ウェブサイト</label></li>
+				<li><label><input type="checkbox" value="c_blog">技術ブログ</label></li>
+				<li><label><input type="checkbox" value="c_friend">友人の紹介</label></li>
+				<li><label><input type="checkbox" value="c_other">その他</label><br />
+				<input type="text" name="otherComment" id="otherComment" placeholder="ご記入ください"></li>
+			</ul>
+		</div>
+		<button type="submit">送信する</button>
+		</form>
+		<aside>
+			<ul id="list">
+				<li id="a">One</li>
+				<li id="b">Two</li>
+				<li id="c">Three</li>
+			</ul>
+		</aside>
+	<!-- </main> -->
+		<footer>
+			<p>練習中.com</p>
+		</footer>
+		<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

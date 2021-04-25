@@ -1,0 +1,73 @@
+
+*{
+	margin: 0;
+}
+
+body{
+	min-height: 100vh; /* 高さの最小値が目一杯 */
+	display: flex;
+	flex-direction: column;
+	/* 固定幅 */
+	width: 800px;
+	margin: auto
+}
+
+header{
+	background-color: gray;
+	height: 150px;
+}
+
+main{
+	display: flex;
+	flex: 1;
+}
+
+form{
+	flex: 1; /* 真ん中の要素目一杯 */
+	background-color: red;
+}
+
+nav{
+	background-color: blue;
+	width: 150px;
+}
+
+aside{
+	background-color: green;
+	width: 200px;
+}
+
+footer{
+	background-color: gray;
+	height: 200px;
+}
+
+/* NGなら赤くする */
+form input:invalid {
+  border : tomato 2px solid;
+}
+
+/* OKなら，その他のテキストボックス以外を緑にする */
+form input:valid:not(:last-child) {
+  border : seagreen 2px solid;
+}
+
+@media screen and (max-width: 900px){ /* 横幅が900px以下になったときに適用 */
+
+	body{
+		width: 100%;
+	}
+
+	main{
+		flex-direction: column; /* 横並びを縦並びに戻す */
+	}
+
+	form{
+		order: -1; /* 数字が低ければ低いほど上に表示される*/
+	}
+
+	nav, aside{
+		width: 100%;
+	}
+
+}
