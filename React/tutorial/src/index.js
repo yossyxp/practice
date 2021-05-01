@@ -4,10 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Blog from "./Blog";
+import Blog_hook from "./Blog_hook";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Blog />
+    {/* <Blog /> */}
+    <Blog_hook />
   </React.StrictMode>,
   document.getElementById('root')
 );
